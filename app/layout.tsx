@@ -3,6 +3,7 @@ import "@fontsource-variable/manrope";
 import "@fontsource-variable/outfit";
 import "./globals.css";
 import { Header, Footer, WhatsAppDock } from "@/components/SiteChrome";
+import { MotionSystem } from "@/components/MotionSystem";
 
 export const metadata: Metadata = {
   title: { default: "Fulcrum Consultancy & Training", template: "%s | Fulcrum" },
@@ -14,5 +15,5 @@ export const metadata: Metadata = {
 const schema = { "@context": "https://schema.org", "@type": "EducationalOrganization", name: "Fulcrum Consultancy & Training", address: { "@type": "PostalAddress", addressLocality: "Harare", addressCountry: "ZW" }, telephone: ["+263778599227", "+263714325378"] };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /><WhatsAppDock /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /></body></html>;
+  return <html lang="en"><body><MotionSystem /><a className="skip-link" href="#main">Skip to content</a><Header />{children}<Footer /><WhatsAppDock /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /></body></html>;
 }
